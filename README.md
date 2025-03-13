@@ -18,11 +18,11 @@ This is a simple terminal-based slot machine game built with JavaScript. Players
 - Clone this repository:
 git clone https://github.com/dimichiko/slot-machine.git
 - Navigate to the project directory:
-cd slot-machine
-Install dependencies (if needed):
-npm install prompt-sync
+- cd slot-machine
+- Install dependencies (if needed):
+- npm install prompt-sync
 - Run the game:
-node index.js
+- node index.js
 
 ## How to Play
 - Enter an amount to deposit.
