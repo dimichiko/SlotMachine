@@ -1,0 +1,238 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #0d1b2a;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #7b2cbf, #5a189a);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Game Container */
+.game-container {
+    background-color: #1b263b;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    margin-bottom: 2rem;
+}
+
+/* Slot Machine */
+.slot-display {
+    background-color: #e6f1ff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    font-family: monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slot-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0.25rem 0;
+}
+
+.slot-symbol {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+/* Winning slot symbol highlight */
+.slot-symbol.winning {
+    background-color: #ffd700;
+    border-color: #ff8c00;
+    box-shadow: 0 0 10px #ffd700;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #e0e1dd;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 2px solid #415a77;
+    background-color: #0d1b2a;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #f72585;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #b5179e;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #4cc9f0;
+    color: #0d1b2a;
+}
+
+.btn-secondary:hover {
+    background-color: #4895ef;
+    transform: translateY(-2px);
+}
+
+.btn-block {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Disabled button */
+.btn.disabled {
+    background-color: #888;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Game Status */
+.game-status {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.balance {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4cc9f0;
+    margin-bottom: 0.5rem;
+}
+
+.message {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.win {
+    color: #52b788;
+}
+
+.lose {
+    color: #e63946;
+}
+
+/* Buttons Container */
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.buttons-container .btn {
+    flex: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #1b263b;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 1rem;
+    }
+    
+    .slot-symbol {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slot-symbol {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+    
+    .buttons-container {
+        flex-direction: column;
+    }
+}

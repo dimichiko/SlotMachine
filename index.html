@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Spins Casino</title>
+    <link rel="stylesheet" href="script.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Lucky Spins Casino</div>
+    </header>
+    
+    <main>
+        <div class="game-container">
+            <h2>Slot Machine</h2>
+            
+            <div class="slot-display">
+                <div class="slot-row">
+                    <div class="slot-symbol">A</div>
+                    <div class="slot-symbol">B</div>
+                    <div class="slot-symbol">C</div>
+                </div>
+                <div class="slot-row">
+                    <div class="slot-symbol">D</div>
+                    <div class="slot-symbol">A</div>
+                    <div class="slot-symbol">B</div>
+                </div>
+                <div class="slot-row">
+                    <div class="slot-symbol">C</div>
+                    <div class="slot-symbol">D</div>
+                    <div class="slot-symbol">A</div>
+                </div>
+            </div>
+            
+            <div class="game-status">
+                <div class="balance">Balance: $<span id="balance">0.00</span></div>
+                <div class="message" id="message">Welcome to Lucky Spins Casino!</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="deposit">Deposit Amount</label>
+                <input type="number" id="deposit" placeholder="Enter amount to deposit">
+            </div>
+            
+            <button class="btn btn-primary btn-block" id="depositBtn">Deposit</button>
+            
+            <div class="form-group">
+                <label for="bet">Bet Amount</label>
+                <input type="number" id="bet" placeholder="Enter your bet">
+            </div>
+            
+            <div class="buttons-container">
+                <button class="btn btn-secondary" id="spinBtn">Spin</button>
+                <button class="btn btn-primary" id="resetBtn">New Game</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Lucky Spins Casino. Play responsibly.</p>
+    </footer>
+    
+    <!-- Add script tag at the end of body for better performance -->
+    <script src="project.js"></script>
+</body>
+</html>
